@@ -1,18 +1,10 @@
 <div class="wrapper">
-  <aside class="aside" role="complementary" [ngClass]="{
-    'aside-show': showAside,
-    'aside-minimize': minimizeAside
-  }">
-    <header class="header align-items-center justify-content-between px-3 d-none d-md-flex">
-      <ul class="nav align-items-center ml-4">
-        <li class="nav-item d-none d-md-flex">
+  <aside class="aside" role="complementary" [ngClass]="{'aside-show': showAside, 'aside-minimize': minimizeAside}">
+    <header class="header align-items-center justify-content-between px-3 d-none d-xl-flex">
+      <ul class="nav align-items-center ml-3">
+        <li class="nav-item d-none d-xl-flex">
           <a class="nav-link px-1" href="javascript:;" (click)="minimizeAside = !minimizeAside">
             <i class="fa fa-bars fa-lg"></i>
-          </a>
-        </li>
-        <li class="nav-item d-md-none">
-          <a class="nav-link px-1" href="javascript:;" (click)="showAside = !showAside">
-            <i class="fa fa-times fa-lg"></i>
           </a>
         </li>
       </ul>
@@ -88,7 +80,7 @@
 
   <main class="main" role="main">
     <header class="header align-items-center justify-content-between px-3">
-      <ul class="nav align-items-center d-md-none">
+      <ul class="nav align-items-center d-xl-none">
         <li class="nav-item">
           <a class="nav-link px-1" href="javascript:;" (click)="showAside = !showAside">
             <i class="fa fa-bars fa-lg"></i>
@@ -96,47 +88,48 @@
         </li>
       </ul>
 
-      <a class="navbar-brand mx-3 d-md-none" href="#">
+      <a class="navbar-brand mx-3 d-xl-none" href="#">
         <img src="./assets/img/logo.png">
       </a>
 
-      <div class="d-none d-md-flex" style="width: 20%;"><!-- spacer --></div>
+      <div class="d-none d-xl-flex" style="width: 10%;"><!-- spacer --></div>
 
-      <form name="search" class="d-none d-md-flex">
+      <form class="form-search" name="search" [ngClass]="{'form-search-show': showHeaderSearchForm}">
         <div class="custom-input-icon">
           <span class="form-icon">
             <i class="fa fa-search"></i>
           </span>
           <input class="form-control" type="search" placeholder="Type in to search">
         </div>
+        <a href="javascript:;" class="btn btn-light ml-2 d-xl-none" (click)="showHeaderSearchForm = !showHeaderSearchForm">Close</a>
       </form>
 
       <ul class="nav align-items-center">
-        <li class="nav-item d-none d-md-flex">
+        <li class="nav-item d-none d-xl-flex">
           <a class="nav-link" href="">
             <i class="fa fa-plus fa-lg"></i>
           </a>
         </li>
-        <li class="nav-item d-none d-md-flex">
+        <li class="nav-item d-none d-xl-flex">
           <a class="nav-link" href="">
             <i class="fa fa-question fa-lg"></i>
           </a>
         </li>
-        <li class="nav-item d-none d-md-flex">
+        <li class="nav-item d-none d-xl-flex">
           <a class="nav-link" href="">
             <i class="fa fa-cog fa-lg"></i>
           </a>
         </li>
-        <li class="nav-item d-md-none">
-          <a class="nav-link" href="">
+        <li class="nav-item d-xl-none">
+          <a class="nav-link" href="javascrip:;" (click)="showHeaderSearchForm = !showHeaderSearchForm">
             <i class="fa fa-search fa-lg"></i>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link px-0" href="">
-            <span class="img img-circle">
+            <span class="img img-circle img-md">
               <span class="img-indicator"></span>
-              <img src="./assets/img/avatar.png">
+              <span class="img img-background img-background-cover img-ratio-default" style="background-image:url('./assets/img/avatar.png');"></span>
             </span>
           </a>
         </li>
@@ -146,7 +139,5 @@
     <router-outlet></router-outlet>
   </main>
 
-  <div class="backdrop" (click)="showAside = !showAside" [ngClass]="{
-    'backdrop-show': showAside
-  }"></div>
+  <div class="backdrop" (click)="showAside = !showAside" [ngClass]="{'backdrop-show': showAside}"></div>
 </div>

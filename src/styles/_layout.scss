@@ -9,9 +9,29 @@
   display: flex;
   min-height: 80px;
 
-  > form {
-    @include media-breakpoint-up(md) {
-      min-width: 340px;
+  > .form-search {
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: inherit;
+      border: inherit;
+      background-color: #fff;
+      padding: 0 ($grid-gutter-width / 2);
+      transform: translateY(-100%);
+      transition: transform 300ms ease;
+
+      &.form-search-show {
+        transform: translateY(0);
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      min-width: 570px;
 
       .form-control {
         border-color: transparent;
@@ -31,9 +51,9 @@
   flex-direction: column;
   width: 300px;
   background-color: #fff;
-  box-shadow: 10px 0 10px -5px rgba(0,0,0,0.1);
+  box-shadow: 8px 0 15px -4px rgba(0, 0, 0, 0.05);
 
-  @include media-breakpoint-down(xs) {
+  @include media-breakpoint-down(lg) {
     width: 280px;
     height: 100%;
     position: fixed;
@@ -51,7 +71,7 @@
     }
   }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     &.aside-minimize {
       width: 104px;
 
@@ -78,10 +98,10 @@
   // Nav menu
   > .nav {
     width: 100%;
-    padding-left: $grid-gutter-width / 2;
+    padding-left: 9px;
 
     .nav-link {
-      color: $body-color;
+      color: $text-muted;
       padding: ($grid-gutter-width / 2) 20px;
       border-top-left-radius: $border-radius;
       border-bottom-left-radius: $border-radius;
@@ -96,11 +116,8 @@
         border-radius: 50%;
         border: 2px solid #7bb4da;
         color: #fff;
-        margin-right: 10px;
-      }
-
-      > .nav-link-text {
-        opacity: 0.8;
+        margin-right: ($grid-gutter-width / 2);
+        text-align: center;
       }
     }
   }
@@ -112,11 +129,11 @@
   flex: 1;
 
   > .header {
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(lg) {
       border-bottom: 1px solid $border-color;
     }
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(xl) {
       color: #fff;
       background-color: map-get($theme-colors, 'primary');
     }

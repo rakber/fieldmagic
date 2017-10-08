@@ -10,6 +10,7 @@ import { AppState } from './app.service';
 export class AppComponent implements OnInit {
   public showAside: boolean = false;
   public minimizeAside: boolean = false;
+  public showHeaderSearchForm: boolean = false;
 
   constructor(
     public appState: AppState
