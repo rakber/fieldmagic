@@ -1,0 +1,25 @@
+@import "~bootstrap/scss/nav";
+
+.nav-link {
+  display: flex;
+  color: inherit;
+  width: 100%;
+
+  @include hover-focus {
+    color: inherit;
+  }
+
+  > .nav-link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+  }
+
+  > .nav-link-text {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+}

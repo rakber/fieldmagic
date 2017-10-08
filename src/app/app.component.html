@@ -1,0 +1,152 @@
+<div class="wrapper">
+  <aside class="aside" role="complementary" [ngClass]="{
+    'aside-show': showAside,
+    'aside-minimize': minimizeAside
+  }">
+    <header class="header align-items-center justify-content-between px-3 d-none d-md-flex">
+      <ul class="nav align-items-center ml-4">
+        <li class="nav-item d-none d-md-flex">
+          <a class="nav-link px-1" href="javascript:;" (click)="minimizeAside = !minimizeAside">
+            <i class="fa fa-bars fa-lg"></i>
+          </a>
+        </li>
+        <li class="nav-item d-md-none">
+          <a class="nav-link px-1" href="javascript:;" (click)="showAside = !showAside">
+            <i class="fa fa-times fa-lg"></i>
+          </a>
+        </li>
+      </ul>
+
+      <a class="navbar-brand" href="#">
+        <img src="./assets/img/logo.png">
+      </a>
+    </header>
+
+    <nav class="nav">
+      <a class="nav-link" [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        <span class="nav-link-icon">
+          <i class="fa fa-id-card"></i>
+        </span>
+        <span class="nav-link-text font-weight-medium">Leads</span>
+      </a>
+      <a class="nav-link" [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        <span class="nav-link-icon">
+          <i class="fa fa-users"></i>
+        </span>
+        <span class="nav-link-text font-weight-medium">Customers</span>
+      </a>
+      <a class="nav-link" [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        <span class="nav-link-icon">
+          <i class="fa fa-map-marker"></i>
+        </span>
+        <span class="nav-link-text font-weight-medium">Sites</span>
+      </a>
+      <a class="nav-link" [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        <span class="nav-link-icon">
+          <i class="fa fa-address-book"></i>
+        </span>
+        <span class="nav-link-text font-weight-medium">Contacts</span>
+      </a>
+      <a class="nav-link" [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        <span class="nav-link-icon">
+          <i class="fa fa-paste"></i>
+        </span>
+        <span class="nav-link-text font-weight-medium">Quotes</span>
+      </a>
+      <a class="nav-link" [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        <span class="nav-link-icon">
+          <i class="fa fa-wrench"></i>
+        </span>
+        <span class="nav-link-text font-weight-medium">Jobs</span>
+      </a>
+      <a class="nav-link" [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        <span class="nav-link-icon">
+          <i class="fa fa-calendar"></i>
+        </span>
+        <span class="nav-link-text font-weight-medium">Scheduling</span>
+      </a>
+      <a class="nav-link" [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        <span class="nav-link-icon">
+          <i class="fa fa-dollar"></i>
+        </span>
+        <span class="nav-link-text font-weight-medium">Sales</span>
+      </a>
+      <a class="nav-link" [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        <span class="nav-link-icon">
+          <i class="fa fa-shopping-bag"></i>
+        </span>
+        <span class="nav-link-text font-weight-medium">Purchase Orders</span>
+      </a>
+      <a class="nav-link" [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        <span class="nav-link-icon">
+          <i class="fa fa-desktop"></i>
+        </span>
+        <span class="nav-link-text font-weight-medium">Dashboard &amp; Reports</span>
+      </a>
+    </nav>
+  </aside>
+
+  <main class="main" role="main">
+    <header class="header align-items-center justify-content-between px-3">
+      <ul class="nav align-items-center d-md-none">
+        <li class="nav-item">
+          <a class="nav-link px-1" href="javascript:;" (click)="showAside = !showAside">
+            <i class="fa fa-bars fa-lg"></i>
+          </a>
+        </li>
+      </ul>
+
+      <a class="navbar-brand mx-3 d-md-none" href="#">
+        <img src="./assets/img/logo.png">
+      </a>
+
+      <div class="d-none d-md-flex" style="width: 20%;"><!-- spacer --></div>
+
+      <form name="search" class="d-none d-md-flex">
+        <div class="custom-input-icon">
+          <span class="form-icon">
+            <i class="fa fa-search"></i>
+          </span>
+          <input class="form-control" type="search" placeholder="Type in to search">
+        </div>
+      </form>
+
+      <ul class="nav align-items-center">
+        <li class="nav-item d-none d-md-flex">
+          <a class="nav-link" href="">
+            <i class="fa fa-plus fa-lg"></i>
+          </a>
+        </li>
+        <li class="nav-item d-none d-md-flex">
+          <a class="nav-link" href="">
+            <i class="fa fa-question fa-lg"></i>
+          </a>
+        </li>
+        <li class="nav-item d-none d-md-flex">
+          <a class="nav-link" href="">
+            <i class="fa fa-cog fa-lg"></i>
+          </a>
+        </li>
+        <li class="nav-item d-md-none">
+          <a class="nav-link" href="">
+            <i class="fa fa-search fa-lg"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-0" href="">
+            <span class="img img-circle">
+              <span class="img-indicator"></span>
+              <img src="./assets/img/avatar.png">
+            </span>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <router-outlet></router-outlet>
+  </main>
+
+  <div class="backdrop" (click)="showAside = !showAside" [ngClass]="{
+    'backdrop-show': showAside
+  }"></div>
+</div>

@@ -1,0 +1,18 @@
+@import "~bootstrap/scss/images";
+
+.img {
+  position: relative;
+
+  .img-indicator {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: map-get($theme-colors, 'primary');
+  }
+
+  > img {}
+}

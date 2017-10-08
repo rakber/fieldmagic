@@ -1,0 +1,8 @@
+@import "~bootstrap/scss/navbar";
+
+.navbar-brand {
+  > img {
+    @include media-breakpoint-up(xs) { width: 120px; }
+    @include media-breakpoint-up(sm) { width: 100%; }
+  }
+}
