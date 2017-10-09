@@ -1,7 +1,7 @@
 <aside class="aside" role="complementary" [ngClass]="{'aside-show': showAside, 'aside-minimize': minimizeAside}">
-  <header class="header align-items-center justify-content-between px-3 d-none d-xl-flex">
+  <header class="header align-items-center justify-content-between px-3 d-none d-lg-flex">
     <ul class="nav align-items-center ml-3">
-      <li class="nav-item d-none d-xl-flex">
+      <li class="nav-item">
         <a class="nav-link px-1" href="javascript:;" (click)="minimizeAside = !minimizeAside">
           <i class="fa fa-bars fa-lg"></i>
         </a>
@@ -79,7 +79,7 @@
 
 <main class="main" role="main">
   <header class="header align-items-center justify-content-between px-3">
-    <ul class="nav align-items-center d-xl-none">
+    <ul class="nav align-items-center d-lg-none">
       <li class="nav-item">
         <a class="nav-link px-1" href="javascript:;" (click)="showAside = !showAside">
           <i class="fa fa-bars fa-lg"></i>
@@ -87,11 +87,11 @@
       </li>
     </ul>
 
-    <a class="navbar-brand mx-3 d-xl-none" href="#">
+    <a class="navbar-brand mx-3 d-lg-none" href="#">
       <img src="./assets/img/logo.png">
     </a>
 
-    <div class="d-none d-xl-flex" style="width: 10%;"><!-- spacer --></div>
+    <div class="d-none d-lg-flex" style="width: 10%;"><!-- spacer --></div>
 
     <form class="form-search" name="search" [ngClass]="{'form-search-show': showHeaderSearchForm}">
       <div class="custom-input-icon">
@@ -100,11 +100,11 @@
         </span>
         <input class="form-control" type="search" placeholder="Type in to search">
       </div>
-      <a href="javascript:;" class="btn btn-light ml-2 d-xl-none" (click)="showHeaderSearchForm = !showHeaderSearchForm">Close</a>
+      <a href="javascript:;" class="btn btn-light ml-2 d-lg-none" (click)="showHeaderSearchForm = !showHeaderSearchForm">Close</a>
     </form>
 
     <ul class="nav align-items-center">
-      <li class="nav-item dropdown d-none d-xl-flex">
+      <li class="nav-item dropdown d-none d-lg-flex">
         <a class="nav-link" href="" data-toggle="dropdown">
           <i class="fa fa-plus fa-lg"></i>
         </a>
@@ -113,17 +113,17 @@
           <a class="dropdown-item" href="#">Create Quote</a>
         </div>
       </li>
-      <li class="nav-item d-none d-xl-flex">
+      <li class="nav-item d-none d-lg-flex">
         <a class="nav-link" href="">
           <i class="fa fa-question fa-lg"></i>
         </a>
       </li>
-      <li class="nav-item d-none d-xl-flex">
+      <li class="nav-item d-none d-lg-flex">
         <a class="nav-link" href="">
           <i class="fa fa-cog fa-lg"></i>
         </a>
       </li>
-      <li class="nav-item d-xl-none">
+      <li class="nav-item d-lg-none">
         <a class="nav-link" href="javascrip:;" (click)="showHeaderSearchForm = !showHeaderSearchForm">
           <i class="fa fa-search fa-lg"></i>
         </a>

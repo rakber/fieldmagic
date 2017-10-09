@@ -11,22 +11,28 @@
 }
 
 
-// Responsive tables
 //
-// Add `.table-responsive` to `.table`s and we'll make them mobile friendly by
-// enabling horizontal scrolling. Only applies <768px. Everything above that
-// will display normally.
+// Responsive tables
 
-.table-xs-responsive {
-  @include media-breakpoint-down(xs) {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+@mixin table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
 
-    // Prevent double border on horizontal scroll due to use of `display: block;`
-    &.table-bordered {
-      border: 0;
-    }
-  }
+@include media-breakpoint-down(xs) {
+  .table-xso-responsive { @include table-responsive; }
+}
+@include media-breakpoint-only(sm) {
+  .table-smo-responsive { @include table-responsive; }
+}
+@include media-breakpoint-only(md) {
+  .table-mdo-responsive { @include table-responsive; }
+}
+@include media-breakpoint-only(lg) {
+  .table-lgo-responsive { @include table-responsive; }
+}
+@include media-breakpoint-up(xl) {
+  .table-xlo-responsive { @include table-responsive; }
 }
