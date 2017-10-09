@@ -1,8 +1,10 @@
-.app,
-.wrapper {
-  display: flex;
+.app {
   width: 100%;
   min-height: 100%;
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+  }
 }
 
 .header {

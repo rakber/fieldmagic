@@ -26,18 +26,11 @@
 
 
 .nav-tabs-line {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
   border-bottom-width: 0;
 
-  .nav-item {
-    display: table-cell;
-    width: 1%;
-  }
+  .nav-item {}
 
   .nav-link {
-    display: block;
     position: relative;
     border-width: 0;
     font-size: 13px;
@@ -45,7 +38,7 @@
     color: $text-muted;
     padding-top: ($grid-gutter-width / 2) + 2px;
     padding-bottom: ($grid-gutter-width / 2) + 2px;
-    text-align: center;
+    justify-content: center;
 
     &.active {
       color: #55acee;

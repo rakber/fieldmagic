@@ -33,7 +33,7 @@ const HMR = helpers.hasProcessFlag('hot');
 const AOT = process.env.BUILD_AOT || helpers.hasNpmFlag('aot');
 const METADATA = {
   title: '',
-  baseUrl: '/',
+  baseUrl: '/projects/fieldmagic/',
   isDevServer: helpers.isWebpackDevServer(),
   HMR: HMR,
   AOT: AOT
